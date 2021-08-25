@@ -44,10 +44,15 @@ const content = `
       <li class="packprop backpack__lid">Lid status:<span> ${
         everydayPack.lidOpen
       }</span></li>
-    </ul>
+    </ul>    
   </article>
 `;
 
 const main = document.querySelector(".maincontent");
 
-main.innerHTML = content;
+const newArticle = document.createElement("article");
+newArticle.classList.add("backpack");
+newArticle.setAttribute("is", "everyday");
+
+newArticle.innerHTML = content;
+main.append(newArticle);
